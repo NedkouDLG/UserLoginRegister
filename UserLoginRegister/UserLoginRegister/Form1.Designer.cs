@@ -35,6 +35,8 @@ namespace UserLoginRegister
             this.emailBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.registerButton = new System.Windows.Forms.Button();
+            this.alreadyHaveAnAccLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // userNameBox
@@ -52,7 +54,6 @@ namespace UserLoginRegister
             this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -87,11 +88,33 @@ namespace UserLoginRegister
             this.label3.TabIndex = 5;
             this.label3.Text = "Password:";
             // 
+            // registerButton
+            // 
+            this.registerButton.Location = new System.Drawing.Point(203, 103);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(92, 35);
+            this.registerButton.TabIndex = 6;
+            this.registerButton.Text = "Register";
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            // 
+            // alreadyHaveAnAccLabel
+            // 
+            this.alreadyHaveAnAccLabel.AutoSize = true;
+            this.alreadyHaveAnAccLabel.Location = new System.Drawing.Point(12, 112);
+            this.alreadyHaveAnAccLabel.Name = "alreadyHaveAnAccLabel";
+            this.alreadyHaveAnAccLabel.Size = new System.Drawing.Size(173, 17);
+            this.alreadyHaveAnAccLabel.TabIndex = 7;
+            this.alreadyHaveAnAccLabel.TabStop = true;
+            this.alreadyHaveAnAccLabel.Text = "Already have an account?";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(315, 152);
+            this.Controls.Add(this.alreadyHaveAnAccLabel);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.emailBox);
@@ -113,6 +136,8 @@ namespace UserLoginRegister
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.LinkLabel alreadyHaveAnAccLabel;
     }
 }
 
