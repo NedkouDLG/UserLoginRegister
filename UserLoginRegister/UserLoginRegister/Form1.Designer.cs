@@ -107,6 +107,7 @@ namespace UserLoginRegister
             this.alreadyHaveAnAccLabel.TabIndex = 7;
             this.alreadyHaveAnAccLabel.TabStop = true;
             this.alreadyHaveAnAccLabel.Text = "Already have an account?";
+            this.alreadyHaveAnAccLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.alreadyHaveAnAccLabel_LinkClicked);
             // 
             // Form1
             // 

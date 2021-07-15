@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace UserLoginRegister
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, ICheckTextBoxIsEmpty
     {
         string connectionString;
         public Form1()
@@ -19,14 +19,20 @@ namespace UserLoginRegister
             InitializeComponent();
             connectionString = "datasource = 127.0.0.1; port = 3306; username = app; password = limo65; database = app;";
         }
-
+        public void checkTextBoxIsEmpty(TextBox textBox)
+        {
+            if (textBox.TextLength == 0)
+            {
+                throw new EmptyTextBoxException(textBox.Name + " is empty! Cannot make registration!");
+            }
+        }
         private void registerButton_Click(object sender, EventArgs e)
         {
             try
             {
-                this.checkTextBoxIsEmpty(userNameBox);
-                this.checkTextBoxIsEmpty(emailBox);
-                this.checkTextBoxIsEmpty(passwordBox);
+                checkTextBoxIsEmpty(userNameBox);
+                checkTextBoxIsEmpty(emailBox);
+                checkTextBoxIsEmpty(passwordBox);
                 createUser();
                 
             }
@@ -60,12 +66,13 @@ namespace UserLoginRegister
             }
         }
 
-        private void checkTextBoxIsEmpty(TextBox textBox)
+        private void alreadyHaveAnAccLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if(textBox.TextLength == 0)
-            {
-                throw new EmptyTextBoxException(textBox.Name + " is empty! Cannot make registration!");
-            }
+            LoginForm login = new LoginForm();
+            this.Hide();
+            login.ShowDialog();
+            this.Close();
+            
         }
     }
 }

@@ -24,3 +24,4 @@ E:\C#\UserLoginRegister\UserLoginRegister\UserLoginRegister\obj\Debug\UserLoginR
 E:\C#\UserLoginRegister\UserLoginRegister\UserLoginRegister\obj\Debug\UserLoginRegister.csproj.CopyComplete
 E:\C#\UserLoginRegister\UserLoginRegister\UserLoginRegister\obj\Debug\UserLoginRegister.exe
 E:\C#\UserLoginRegister\UserLoginRegister\UserLoginRegister\obj\Debug\UserLoginRegister.pdb
+E:\C#\UserLoginRegister\UserLoginRegister\UserLoginRegister\obj\Debug\UserLoginRegister.LoginForm.resources
